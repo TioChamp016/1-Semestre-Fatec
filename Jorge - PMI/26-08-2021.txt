@@ -1,0 +1,91 @@
+Option Explicit
+
+Sub exerc01()
+'declaração de variaveis
+Dim hora As Integer, sal As Double, valor_h As Double
+Dim sal_bruto As Double, imposto As Double
+Dim sal_liq As Double
+'leitura de dados
+hora = ActiveCell.Offset(0, -2).Value
+sal = ActiveCell.Offset(0, -1).Value
+'calculos
+valor_h = sal / 2
+sal_bruto = hora * valor_h
+imposto = sal_bruto*0.03
+sal_liq = sal_bruto - imposto
+'mostrar os dados
+ActiveCell.Value = valor_h
+ActiveCell.Offset(0, 1).Value = sal_bruto
+ActiveCell.Offset(0, 2).Value = imposto
+ActiveCell.Offset(0, 3).Value = sal_liq
+'movimentar cursor linha abaixo
+ActiveCell.Offset(1, 0).Select
+End Sub
+
+Option Explicit
+
+Sub exerc01()
+'declaração de variaveis
+Dim kw As Integer, sal As Double, valor_kw As Double
+Dim valor_rs As Double, desconto As Double
+Dim valor_final As Double
+'leitura de dados
+kw = ActiveCell.Offset(0, -2).Value
+sal = ActiveCell.Offset(0, -1).Value
+'calculos
+valor_kw = sal / 5
+valor_rs = valor_kw * kw
+desconto = valor_rs * 0.15
+valor_final = valor_rs - desconto
+'mostrar os dados
+ActiveCell.Value = valor_kw
+ActiveCell.Offset(0, 1).Value = valor_rs
+ActiveCell.Offset(0, 2).Value = desconto
+ActiveCell.Offset(0, 3).Value = valor_final
+'movimentar cursor linha abaixo
+ActiveCell.Offset(1, 0).Select
+End Sub
+
+Option Explicit
+
+Sub exerc01()
+'declaração de variaveis
+Dim ano_n As Integer, ano_a As Integer, idade As Integer
+Dim idade_m As Integer, idade_s As Integer
+Dim idade_d As Integer
+'leitura de dados
+ano_n = ActiveCell.Offset(0, -2).Value
+ano_a = ActiveCell.Offset(0, -1).Value
+'calculos
+idade = ano_a - ano_n
+idade_m = idade * 12
+idade_s = idade * 48
+idade_d = idade * 365
+'mostrar os dados
+ActiveCell.Value = idade
+ActiveCell.Offset(0, 1).Value = idade_m
+ActiveCell.Offset(0, 2).Value = idade_s
+ActiveCell.Offset(0, 3).Value = idade_d
+'movimentar cursor linha abaixo
+ActiveCell.Offset(1, 0).Select
+End Sub
+
+Option Explicit
+
+Sub exerc01()
+'declaração de variaveis
+Dim raio As Double, compr As Double
+Dim area As Double, volume As Double
+'leitura de dados
+raio = ActiveCell.Offset(0, -1).Value
+'calculos
+compr = 2 * (256 / 81) * raio
+area = (256 / 81) * (raio * raio)
+volume = 3 / 4 * (256 / 81) * (raio * raio * raio)
+'mostrar os dados
+ActiveCell.Value = compr
+ActiveCell.Offset(0, 1).Value = area
+ActiveCell.Offset(0, 2).Value = volume
+'movimentar cursor linha abaixo
+ActiveCell.Offset(1, 0).Select
+End Sub

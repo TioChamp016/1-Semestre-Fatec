@@ -1,0 +1,37 @@
+programa {
+	funcao inicio() {
+		inteiro voto
+
+		escreva("Digite o número do seu voto: ")
+		leia(voto)
+
+		se (voto = 40)
+			escreva("Tio Patinhas")
+		senao se (voto = 26)
+			escreva("Margarida")
+		senao se (voto = 48)
+			escreva("Tio Donald")
+		senao se (voto = 78)
+			escreva("Pluto")
+		senao
+			escreva("Voto Nulo")
+
+
+
+24. Faça um programa que receba o tempo em segundos de 3 voltas que um piloto de Formula 1 percorreu. Mostre qual foi a volta mais rápida.
+
+25. Um aluno é aprovado apenas quando tem média de suas notas maior ou igual à 6 e quando tem menos que 20 faltas. Peça para o usuário digitar suas 2 notas e a quantidade de faltas e mostre se ele está aprovado ou não.
+
+26. Peça para o usuário digitar se ele tem febre alta, manchas na pele e dor no corpo. Faça um algoritmo capaz de dar o diagnóstico para pessoa seguindo a seguinte tabela fictícia: Dengue: Febre Alta + Dor no Corpo Zika: Manchas na Pele + Dor no Corpo Chikungunya: Febre Alta + Manchas na Pele
+
+27. Peça para o usuário digitar a sua preferencia: Marvel ou DC. Se ele escolher Marvel, peça para ele escolher entre o Capitão América ou Homem de Ferro.  Se ele escolher DC, peça para ele escolher entre o Batman ou Superman. Mostre qual foi o super herói que ele escolheu.
+
+28. Peça para o usuário digitar o nome de 2 times de futebol e a quantidade de gols que cada um deles fez. Mostre qual é o time campeão ou se houve empate.
+
+29. Peça para o usuário digitar um número qualquer. Mostre se este número é positivo ou negativo, e se é par ou impar. Para verificar se o número é par, o resto da divisão por 2 deverá ser 0. O resto da divisão no Portugol é obtido através do operador %. resto = numero % 2
+
+30.Peça para o usuário digitar a hora atual (inteira). Se for maior que 5h e antes das 12h mostre a mensagem de “bom dia”. Se for de 12h às 18h mostre “boa tarde”. Se for as 19h até as 23h mostre “boa noite”. Se for das 0h às 5h mostre a mensagem de “vá dormir!”.
+ 
+31. Peça para o usuário digitar um número representando as horas e outro número representando os minutos para hora de início de uma aula. Depois peça para o usuário digitar um número da hora e outro número para o minuto do fim da aula. Mostre ao usuário quantos minutos a aula durou.
+ 
+32. Peça para o usuário digitar a quantidade de minutos e mostre a quantidade de horas e minutos que dá este tempo. Por exemplo: 320 minutos = 5h:20m. o resto da divisão de 320 por 60 = 20 a parte inteira da divisão (\) de 320 por 60 = 5

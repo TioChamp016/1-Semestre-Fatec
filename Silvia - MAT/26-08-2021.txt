@@ -1,0 +1,23 @@
+Option Explicit
+
+Sub exerc01()
+'declaração de variaveis
+Dim hora As Integer, sal As Double, valor_h As Double
+Dim sal_bruto As Double, imposto As Double
+Dim sal_liq As Double
+'leitura de dados
+hora = ActiveCell.Offset(0, -2).Value
+sal = ActiveCell.Offset(0, -1).Value
+'calculos
+valor_h = sal /2
+sal_bruto = hora * valor_h
+'imposto = sal_bruto*0.03
+sal_liq = sal_bruto - imposto
+'mostrar os dados
+ActiveCell.Value = valor_h
+ActiveCell.Offset(0, 1).Value = sal_bruto
+ActiveCell.Offset(0, 2).Value = imposto
+ActiveCell.Offset(0, 3).Value = sal_liq
+'movimentar cursor linha abaixo
+ActiveCell.Offset(1, 0).Select
+End Sub

@@ -1,0 +1,66 @@
+https://blockly.games/maze?lang=pt-br&level=9&skin=0#kzamwb
+
+Torre de Hanói com 3 discos, de pino 1 para pino 3 em 7 movimentos.
+
+MOVER DISCO_COR->PINO_NUMERO
+mover roxo->3
+mover vermelho->2
+mover roxo->2
+mover laranja->3
+mover roxo->1
+mover vermelho->3
+mover roxo->3
+
+Torre de Hanói com 4 discos, de pino 1 para pino 3 em 15 movimentos.
+
+MOVER DISCO_COR->PINO_NUMERO
+mover roxo-> 2
+mover vermelho->3
+mover roxo->3
+mover laranja->2
+mover roxo->1
+mover vermelho->2
+mover roxo->2
+mover verde->3
+mover roxo->3
+mover vermelho->1
+mover roxo->1
+mover vermelho->3
+mover roxo->2
+mover vermelho->3
+mover roxo->3
+
+Torre de Hanói com 5 discos, de pino 1 para pino 2 em 31 movimentos.
+
+MOVER DISCO_COR->PINO_NUMERO
+mover roxo-> 2
+mover vermelho->3
+mover roxo->3
+mover laranja->2
+mover roxo->1
+mover vermelho->2
+mover roxo->2
+mover verde->3 
+mover roxo->3
+mover vermelho->1
+mover roxo->1
+mover laranja->3
+mover roxo->2
+mover vermelho->3
+mover roxo->3
+mover amarelo->2
+mover roxo->1
+mover vermelho->2
+mover roxo->2
+mover laranja1
+mover roxo->3
+mover vermelho->1
+mover roxo->1
+mover verde->2
+mover roxo->2
+mover vermelho->3
+mover roxo->3
+mover laranja->2
+mover roxo->1
+mover vermelho->2
+mover roxo->2

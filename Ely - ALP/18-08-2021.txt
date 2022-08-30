@@ -1,0 +1,10 @@
+5 - Calcule e mostre a área de um retângulo. Para isso, o usuário deverá digitar o comprimento do lado e da altura do retângulo. Area = Lado * Altura.
+6 - Crie uma variável com o ano atual. Peça para o usuário digitar o seu ano de nascimento. Mostre qual é a sua idade.
+7 - Faça um sistema para calcular o valor a ser pago por um boleto de cobrança atrasado. Para isso, peça para o usuário digitar o valor do boleto e a quantidade de dias de atraso. Deverá ser calculado 2% de multa de atraso, R$ 2,00 de desoesa de cobrança e também 0,5% de juros ao dia.
+8 - Crie duas variáveis chamadas de A e B. Peça para o usuário digitar um valor qualquer para elas. Depois passe o valor da variável A para B e valor de B para A, e mostre seus valores.
+9 - Faça um algoritmo que seja capaz de receber o valor do produto e mostre as seguintes informações:
+a - Valor á vista: 10% de desconto.
+b - 3 parcelas: nenhum desconto - mostre o valor total e o valor de cada parcela.
+c - 10 parcelas: acréscimo de 5% - mostre o valor total e o valor de cada parcela.
+10 - A conversão de graus Farenheit para Celsius é obtida por C = (F – 32)*5/9. Faça um algoritmo que receba a temperatura em graus Farenheit e mostre em Celsius.
+11 – Faça um algoritmo em que o usuário irá digitar o preço de um produto em dólares e a cotação do dólar no dia e mostre qual é o valor desse produto em Reais.

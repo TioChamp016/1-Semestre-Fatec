@@ -1,0 +1,121 @@
+Option Explicit
+
+Sub EXE15()
+'EXE_R15. O custo ao consumidor de um carro novo é a soma do preço de fábrica com o percentual de lucro do
+'distribuidor e dos impostos aplicados ao preço de fábrica. Faça um programa que receba o preço de fábrica de um
+'veiculo, o percentual de lucro do distribuidor e o percentual de impostos e depois calcule e mostre:
+'a) o valor correspondente ao lucro do distribuidor
+'b) o valor correspondente aos impostos
+'c) o preço final do veiculo
+'O algoritmo em pseudocódigo do problema, segundo o material de estudo:
+
+'declaração de variaveis
+Dim s1 As String, s2 As String
+Dim preco As Double, per_d As Double, per_i As Double
+Dim valor_d As Double, valor_i As Double, preco_final As Double
+'leitura de dados
+preco = CDbl(InputBox(" Insira o preço de fábrica do carro "))
+per_d = CDbl(InputBox(" Insira o percentual do distribuidor "))
+per_i = CDbl(InputBox(" Insira o percentual do imposto "))
+'calculos e operações
+valor_d = preco * (per_d / 100)
+valor_i = preco * (per_i / 100)
+preco_final = preco + valor_d + valor_i
+'mostrar resultados/dados
+s1 = " O preço do carro é: " & preco & " reais"
+s1 = s1 & vbCrLf & " O percentual do distribuidor é: " & per_d & " %"
+s1 = s1 & vbCrLf & " O percentual do imposto é: " & per_i & " %"
+s1 = s1 & vbCrLf & " O valor do lucro do distribuidor é: " & valor_d & " reais"
+s1 = s1 & vbCrLf & " O valor do imposto é: " & valor_i & " reais"
+s1 = s1 & vbCrLf & " O valor final é: " & preco_final & " reais"
+
+MsgBox s1
+
+'MsgBox " s1 "
+End Sub
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Option Explicit
+
+Sub EXE06()
+'EXE_P6. Um funcionário recebe um salario fixo mais 4% de comissão sobre as vendas. Faça um programa que receba
+'o salário fixo do funcionário e o valor de suas vendas, calcule e mostre a comissão e seu salario final.
+
+'declaração de variaveis
+Dim s1 As String
+Dim salario As Double, vendas As Double, comissão As Double, sal_total As Double
+'leitura de dados
+salario = CDbl(InputBox(" Insira o valor do salário "))
+vendas = CDbl(InputBox(" Insira o valor total das vendas "))
+'calculos e operações
+comissão = vendas * 0.04
+sal_total = comissão + salario
+'mostrar resultados/dados
+s1 = " O valor do salário fixo é: " & salario & " reais"
+s1 = s1 & vbCrLf & " O valor recebido de comissões foi: " & comissão & " reais"
+s1 = s1 & vbCrLf & " O valor total a receber: " & sal_total & " reais"
+
+MsgBox s1
+
+'MsgBox " s1 "
+End Sub
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Option Explicit
+
+Sub EXE07()
+'EXE_P7. Faça um programa que receba o peso de uma pessoa, calcule e mostre:
+'a) O novo peso, se a pessoa engordar 15% sobre o peso digitado.
+'b) O novo peso, se a pessoa emagrecer 20% sobre o peso digitado.
+
+'declaração de variaveis
+Dim s1 As String
+Dim peso As Double, peso15 As Double, peso20 As Double
+Dim valor_d As Double, valor_i As Double, preco_final As Double
+'leitura de dados
+peso = CDbl(InputBox(" Insira o peso em kilos "))
+'calculos e operações
+peso15 = peso * 1.15
+peso20 = peso * 0.8
+'mostrar resultados/dados
+s1 = " O peso é: " & peso & " Kilos"
+s1 = s1 & vbCrLf & " Se engordar 15% pesará: " & peso15 & " Kilos"
+s1 = s1 & vbCrLf & " Se emagrecer 20% pesará: " & peso20 & " Kilos"
+
+MsgBox s1
+
+'MsgBox " s1 "
+End Sub
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Option Explicit
+
+Sub EXE21()
+'EXE_P21. Faça um programa que receba o numero de horas trabalhadas, o valor do salario mínimo e o número de
+'horas extras trabalhadas, calcule o mostre o salario a receber, seguindo as regras abaixo:
+
+'declaração de variaveis
+Dim s1 As String
+Dim horas As Double, salariom As Double, horasx As Double, salariototal As Double
+Dim salarioh As Double, salariohx As Double, salariob As Double, salariox As Double
+'leitura de dados
+horas = CDbl(InputBox(" Quantas horas de trabalho? "))
+salariom = CDbl(InputBox(" Qual o valor do salário mínimo? "))
+horasx = CDbl(InputBox(" Quantas horas extra foram feitas? "))
+'calculos e operações
+salarioh = salariom * 0.12
+salariohx = salariom * 0.24
+salariob = horas * salarioh
+salariox = horasx * salariohx
+salariototal = salariob + salariox
+'mostrar resultados/dados
+s1 = " De acordo com o salário mínimo de: " & salariom & " Reais"
+s1 = s1 & vbCrLf & " O salário a receber é de: " & salariototal & " Reais"
+
+MsgBox s1
+
+'MsgBox " s1 "
+End Sub

@@ -1,0 +1,53 @@
+1 - C
+2 - A
+3 - D
+4 - B
+
+Page 4
+Ex. 1b
+1 - Name
+2 - Sorry
+3 - number
+4 - Ok
+5 - Hi
+6 - Hello
+7 - meet
+8 - My
+9 - Mom
+10 - You
+11 - Thank
+12 - Fine
+
+Ex. 1c
+Hello = Hi
+My name's = I'm
+Very well = Fine
+Thank you = Thanks
+Goodbye = Bye
+
+Page 5
+Ex. 2a
+am
+is
+are
+is
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+Munday
+
+five
+seven
+eleven
+tewlve
+fifteen
+eighteen
+twenty
+
+Welcome ( Uélcam )
+my pleasure ( my pléjãr)

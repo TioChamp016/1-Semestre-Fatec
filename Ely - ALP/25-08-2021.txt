@@ -1,0 +1,78 @@
+programa {
+	funcao inicio() {
+		/*
+		  O tempo de gestação normalmente é calculado em semanas. Portanto, faça um algoritmo que peça para o usuário digitar a quantidade de semanas e mostre qual é a
+		  quantidade de meses e a quantidade de dias. Considere para este cálculo que todos os meses possuem 30 dias. Exemplo: 25 semanas = 25*7 = 175dias   175/30 = 5.8 meses.
+		  */
+		  //declaração das variáveis
+		  real meses, dias, semanas
+		  //entradas
+		  escreva("Quantas semanas de gestação.....: ")
+		  leia(semanas)
+		  //processamento
+		  dias = semanas * 7
+		  meses = dias / 30
+		  //saídas
+		  escreva("Quantidade em meses.............: ", meses, " \n")
+		  escreva("Quantidade em dias..............: ", dias, " \n")
+	}
+}
+
+
+programa {
+	funcao inicio() {
+		/*
+		  13 - considere que um carro faz 9km/litro de consumo com alcool. Já na gasolina ele faz 11km/litro. Faça um algoritmo em que o usuário irá digitar a distância
+		  que deseja viajar, o preço do alcool e o preço do litro da gasolina. Calcule e mostre o valor que será gasto caso abasteça com alcool e o valor gasto com gasolina.
+		  */
+		  //declaração das variáveis
+		  real kms, gasolina, alcool, gastoGasolina, gastoAlcool, litrosGasolina, litrosAlcool
+		  //entradas
+		  escreva("Quantos kilometros irá percorrer..: ")
+		  leia(kms)
+		  escreva("Qual o valor do litro de alcool...: ")
+		  leia(alcool)
+		  escreva("Qual o valor do litro de gasolina.: ")
+		  leia(gasolina)
+		  //processamento
+		  litrosGasolina = (kms / 11)
+		  litrosAlcool = (kms / 9)
+		  gastoGasolina = litrosGasolina * gasolina
+		  gastoAlcool = litrosAlcool * alcool
+		  //saídas
+		  escreva("Gasto andando com gasolina........: ", gastoGasolina, " \n")
+		  escreva("Gasto andando com alcool..........: ", gastoAlcool, " \n")
+	}
+}
+
+
+programa {
+	funcao inicio() {
+		/*
+		  14 - Deseja-se construir um algorítmo para auxiliar a organização de um churrasco. Sabe-se que em média homens consomem 350g de carne e
+		  tomam 2 litros de cerveja e que mulheres consomem 280g de carne e tomam 1.5 litros de cerveja. Peça para o usuário digitar a quantidade
+		  de homens e de mulheres que irão no churrasco e mostre a quantidade total de carne e cerveja que será necessária.
+		  */
+		  //declaração das variáveis
+		  real carneh, cervejah, carnem, cervejam, homens, mulheres, garrafas
+		  //entradas
+		  escreva("Quantos homens irão............................: ")
+		  leia(homens)
+		  escreva("Quantos mulheres irão..........................: ")
+		  leia(mulheres)
+		  //processamento
+		  carneh = homens * 350
+		  cervejah = homens * 2
+		  carnem = mulheres * 280
+		  cervejam = mulheres * (1.5)
+		  //saídas
+		  escreva("A quantidade total de carne em gramas é........: ", carneh + carnem, " g\n")
+		  escreva("A quantidade total de cerveja em litros é......: ", cervejah + cervejam, " L\n")
+		  //desafio
+		  garrafas = ((cervejah + cervejam) * 1000) / 600
+		  escreva("A quantidade de garrafas de 600ml de cerveja é.: ", garrafas " L\n")
+	}
+}
+
+
+RomarimJr100

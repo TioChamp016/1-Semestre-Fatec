@@ -1,0 +1,50 @@
+// C++ code
+//
+void setup() // CONFIGURAR PORTAS DO ARDUINO
+{
+	// Sinalizador A
+	pinMode(11, OUTPUT); // Vermelho A
+	pinMode(10, OUTPUT); // Amarelo A
+	pinMode(9, OUTPUT);	// Verde A
+
+	// Sinalizador B
+	pinMode(5, OUTPUT);	// Vermelho B
+	pinMode(6, OUTPUT); // Amarelo B
+	pinMode(7, OUTPUT);  // Verde B
+}
+
+void loop() // LÓGICA DE CONTROLE DO SEMÁFORO
+{
+//	ligar.vermelha.A
+	digitalWrite(11, HIGH);
+//	ligar.verde.B
+	digitalWrite(7, HIGH);
+//ContarTempo(3segundos)
+	delay(3000);
+//desligar.verde.B
+	digitalWrite(7, LOW);
+//ligar.amarelo.B
+	digitalWrite(6, HIGH);
+//ContarTempo(1segundo)
+	delay(1000);
+//desligar.amarelo.B
+	digitalWrite(6, LOW);
+//desligar.vermelho.A
+	digitalWrite(11, LOW);
+//ligar.vermelho.B
+	digitalWrite(5, HIGH);
+//ligar.verde.A
+	digitalWrite(9, HIGH);
+//ContarTempo(3segundos)
+	delay(3000);
+//desligar.verde.A
+	digitalWrite(9, LOW);
+//ligar.amarelo.A
+	digitalWrite(10, HIGH);
+//ContarTempo(1segundo)
+	delay(1000);
+//desligar.amarelo.A
+	digitalWrite(10, LOW);
+//desligar.vermelho.B
+	digitalWrite(5, LOW);
+}

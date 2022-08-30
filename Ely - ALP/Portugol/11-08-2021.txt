@@ -1,0 +1,116 @@
+programa {
+	funcao inicio() {
+		/*
+		  Peça para o usuário digitar seu ano de nascimento e mostra a sua idade
+		  sabendo-se que ele já fez aniversário no ano de 2021.
+		  Entradas? anonascto
+		  Processamento? idade = 2021 - anonascto
+		  Saída? idade
+		  */
+		  //declaração das variáveis
+		  inteiro idade, anonascto
+		  cadeia nome
+		  //entradas
+		  escreva("Digite seu ano de nascimento: ")
+		  leia(anonascto)
+		  escreva("Digite seu nome: ")
+		  leia(nome)
+		  //processamento
+		  idade = 2021 - anonascto
+		  //saídas
+		  escreva("A idade dx ", nome, " é ", idade)
+	}
+}
+
+
+programa {
+	funcao inicio() {
+		/*
+		  
+		  */
+		  //declaração das variáveis
+		  real total, pago, troco
+		  //entradas
+		  escreva("Digite o valor total da compra: ")
+		  leia(total)
+		  escreva("Digite o valor pago pelo cliente: ")
+		  leia(pago)
+		  //processamento
+		  troco = pago - total
+		  //saídas
+		  escreva("Este é o troco devido: ", troco)
+	}
+}
+
+
+programa {
+	funcao inicio() {
+		/*
+		  
+		  */
+		  //declaração das variáveis
+		  inteiro volta1, volta2, volta3, tempototal, media
+		  //entradas
+		  escreva("Digite em segundos o tempo da primeira volta: ")
+		  leia(volta1)
+		  escreva("Digite em segundos o tempo da segunda volta: ")
+		  leia(volta2)
+		  escreva("Digite em segundos o tempo da terceira volta: ")
+		  leia(volta3)
+		  //processamento
+		  tempototal = volta1 + volta2 + volta3
+		  media = tempototal / 3
+		  //saídas
+		  escreva("Este é o tempo total em segundos: ", tempototal, " \n")
+		  escreva("Este é o tempo media de voltas em segundos: ", media)
+	}
+}
+
+
+programa {
+	funcao inicio() {
+		/*
+		  
+		  */
+		  //declaração das variáveis
+		  real altura, peso
+		  //entradas
+		  escreva("Digite sua altura: ")
+		  leia(altura)
+		  //processamento
+		  peso = ((altura)*(altura)) * 25
+		  //saídas
+		  escreva("Este é o peso ideal: ", peso)
+	}
+}
+
+
+programa {
+	funcao inicio() {
+		/*
+		  
+		  */
+		  //declaração das variáveis
+		  real preco, total, valorparcelas, descontado
+		  inteiro quantidade, percentual, parcelas
+		  //entradas
+		  escreva("Valor unitário do produto: ")
+		  leia(preco)
+		  escreva("Quantidade de produtos: ")
+		  leia(quantidade)
+		  escreva("Porcentagem de desconto: ")
+		  leia(percentual)
+		  escreva("Digite a quantidade de parcelas: ")
+		  leia(parcelas)
+		  //processamento
+		  total = preco * quantidade
+		  percentual = (percentual * 0.01) * total
+		  valorparcelas = (total - percentual) / parcelas
+		  descontado = total - percentual
+		  //saídas
+		  escreva("Valor total : ", total, " \n")
+		  escreva("Desconto : ", percentual, "% \n")
+		  escreva("Este é o valor das parcelas : ", valorparcelas, " \n")
+		  escreva("Valor com desconto : ", descontado)
+	}
+}

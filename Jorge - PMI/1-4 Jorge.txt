@@ -1,0 +1,143 @@
+Option Explicit
+
+Sub EXE15()
+'Sejam dados o peso e altura de uma pessoa, elabore um programa que calcule o IMC (Indice de Massa Corporea) e mostre
+'a situação de acordo com a tabela abaixo:
+
+'declaração de variaveis
+Dim peso As Double, altura As Double, imc As Double
+Dim msg1 As String, msg2 As String, msg3 As String, msg4 As String, msg5 As String, msg6 As String, msg7 As String
+'leitura de dados
+peso = CDbl(InputBox(" Insira o peso em kilos "))
+altura = CDbl(InputBox(" Insira a altura em metros "))
+'calculos e operações
+imc = peso / (altura * altura)
+msg1 = " Está muito abaixo do peso. "
+msg2 = " Abaixo do peso. "
+msg3 = " Peso normal. "
+msg4 = " Acima do peso. "
+msg5 = " Obesidade I. "
+msg6 = " Obesidade II. "
+msg7 = " Obesidade III. "
+'mostrar resultados/dados
+    If (imc < 17) Then
+        MsgBox msg1
+End If
+    If (imc >= 17) And (imc <= 18.49) Then
+        MsgBox msg2
+End If
+    If (imc >= 18.5) And (imc <= 24.99) Then
+        MsgBox msg3
+End If
+    If (imc >= 25) And (imc <= 29.99) Then
+        MsgBox msg4
+End If
+    If (imc >= 30) And (imc <= 34.99) Then
+        MsgBox msg5
+End If
+    If (imc >= 35) And (imc <= 39.99) Then
+        MsgBox msg6
+End If
+    If (imc >= 40) Then
+        MsgBox msg7
+End If
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------
+Option Explicit
+
+Sub EXE15()
+'Elabore um programa que entre com os valores de A, B e C que correspondam aos valores de
+'Ax2 + Bx + C = 0, que representa uma equação do 2º grau. O objetivo do programa é mostrar quando
+'possível as raízes X1 e X2.
+
+'declaração de variaveis
+Dim a1 As Double, b2 As Double, c3 As Double, delta As Double, x1 As Double, x2 As Double, x3 As Double
+Dim msg1 As String, msg2 As String, msg3 As String, msg4 As String
+'leitura de dados
+a1 = CDbl(InputBox(" Insira o valor de A "))
+b2 = CDbl(InputBox(" Insira o valor de B "))
+c3 = CDbl(InputBox(" Insira o valor de C "))
+'calculos e operações
+delta = (b2 * b2) - (4 * a1 * c3)
+x1 = (-b2) / (2 * a1)
+msg1 = " Estes valores não formam uma equação de segundo grau "
+msg2 = " Não existe raiz real "
+msg3 = " Existe uma raiz real "
+msg4 = " Existem duas raízes reais "
+'mostrar resultados/dados
+If (a1 = 0) Then
+MsgBox msg1
+    ElseIf (delta < 0) Then
+    MsgBox msg2
+        ElseIf (delta = 0) Then
+        MsgBox msg3 & vbCrLf & x1
+            ElseIf (delta > 0) Then
+            x2 = ((-b2) + Sqr(delta)) / (2 * a1)
+            x3 = ((-b2) - Sqr(delta)) / (2 * a1)
+            MsgBox msg4 & vbCrLf & x2 & vbCrLf & x3
+End If
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------
+Option Explicit
+
+Sub EXE15()
+'Elabore um programa que entra com dois números inteiros e mostre todas as relações existentes
+'entre eles, utilizando-se operadores relacionais.
+
+'declaração de variaveis
+Dim n1 As Integer, n2 As Integer
+Dim msg1 As String, msg2 As String, msg3 As String, msg4 As String, msg5 As String, msg6 As String
+'leitura de dados
+n1 = CDbl(InputBox(" Insira um número inteiro "))
+n2 = CDbl(InputBox(" Insira outro número inteiro "))
+'calculos e operações
+msg1 = " Um numero maior que outro "
+msg2 = " Um numero maior ou igual a outro "
+msg3 = " Um numero igual a outro "
+msg4 = " Um numero menor que outro "
+msg5 = " Um numero menor ou igual a outro "
+msg6 = " Um numero diferente que outro "
+'mostrar resultados/dados
+If (n1 > n2) Then
+MsgBox msg1
+    ElseIf (n1 >= n2) Then
+    MsgBox msg2
+        ElseIf (n1 = n2) Then
+        MsgBox msg3
+            ElseIf (n1 < n2) Then
+            MsgBox msg4
+                ElseIf (n1 <= n2) Then
+                MsgBox msg5
+                    ElseIf (n1 <> n2) Then
+                    MsgBox msg6
+End If
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------
+Option Explicit
+
+Sub EXE15()
+'Faça um programa que entre com 3 números e mostre-os em ordem crescente. Suponha que os
+'números lidos pelos usuários sejam diferentes.
+
+'declaração de variaveis
+Dim n1 As Double, n2 As Double, n3 As Double
+'leitura de dados
+n1 = CDbl(InputBox(" Insira um primeiro número "))
+n2 = CDbl(InputBox(" Agora insira outro "))
+n3 = CDbl(InputBox(" Por último insira um terceiro número "))
+'operações e calculos
+If ((n1 > n2) And (n1 > n3)) And (n2 > n3) Then
+    MsgBox " A ordem crescente é:  " & n3 & "  " & n2 & "  " & n1
+    ElseIf ((n1 > n2) And (n1 > n3)) And (n2 < n3) Then
+    MsgBox " A ordem crescente é:  " & n2 & "  " & n3 & "  " & n1
+        ElseIf ((n2 > n1) And (n2 > n3)) And (n1 > n3) Then
+        MsgBox " A ordem crescente é:  " & n3 & "  " & n1 & "  " & n2
+        ElseIf ((n2 > n1) And (n2 > n3)) And (n1 < n3) Then
+        MsgBox " A ordem crescente é:  " & n1 & "  " & n3 & "  " & n2
+            ElseIf ((n3 > n1) And (n3 > n2)) And (n1 > n2) Then
+            MsgBox " A ordem crescente é:  " & n2 & "  " & n1 & "  " & n3
+            ElseIf ((n3 > n1) And (n3 > n2)) And (n1 > n2) Then
+            MsgBox " A ordem crescente é:  " & n1 & "  " & n2 & "  " & n3
+End If
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------

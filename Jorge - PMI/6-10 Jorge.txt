@@ -1,0 +1,264 @@
+Option Explicit
+
+'Elabore um programa em VBA que receba o salário atual de um funcionário e o código
+'correspondete de um cargo do funcionário. Este código corresponde ao aumento que o funcionário
+'terá um seu salário. O programa deverá mostrar o salario atual, a função do funcionário, o valor e
+'percentual de aumento e o salario final.
+
+Sub EXEC1()
+'declaração de variaveis
+Dim sal As Double, codigo As Integer
+Dim per As Double, valor_aum As Double, sal_fin As Double
+Dim cargo As String, s As String
+'leitura de dados
+sal = CDbl(InputBox("Entre com o salario base."))
+codigo = CInt(InputBox("Entre com o codigo do cargo." & vbCrLf & "1 - Escriturario" & vbCrLf & "2 - Digitador" & vbCrLf & _
+"3 - Analista" & vbCrLf & "4 - Gerente" & vbCrLf & "5 - Diretor"))
+'calculos / operações
+Select Case codigo
+Case Is = 1
+    cargo = "Escriturario"
+    per = 0.4
+Case 2
+    cargo = "Digitador"
+    per = 0.35
+Case 3
+    cargo = "Analista"
+    per = 0.32
+Case 4
+    cargo = "Gerente"
+    per = 0.3
+Case 5
+    cargo = "Diretor"
+    per = 0.24
+End Select
+valor_aum = sal * per
+sal_fin = sal + valor_aum
+'saida de dados
+s = "O salario base é de: " & sal
+s = s & vbCrLf & "O cargo é: " & cargo
+s = s & vbCrLf & "O aumento foi de: " & per & "%"
+s = s & vbCrLf & "O valor do aumento foi de: " & valor_aum
+s = s & vbCrLf & "O valor do salario final é: " & sal_fin
+
+MsgBox s
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------
+Option Explicit
+
+'Faça um programa que receba um numero real e um outro contendo a escolha de 1 ate 4 e
+'execute uma das operações listadas abaixo de acordo com uma entrada de dados a escolha do
+'usuário. Se for digitada uma opção invalida, mostre uma mensagem de erro e termine a execução
+'do programa. As opções de escolha para as operações são:
+
+Sub EXEC2()
+'declaração de variaveis
+Dim numero As Double, codigo As Integer, n1 As Double, n2 As Double, n3 As Double, n4 As Double
+'leitura de dados
+codigo = CInt(InputBox("Entre com 1 das 4 opções a seguir:" & vbCrLf & vbCrLf & "1 - Elevar o numero ao quadrado." & vbCrLf & "2 - Elevar o numero ao cubo." & vbCrLf & _
+"3 - Extrair a raiz quadrada." & vbCrLf & "4 - Extrair a raiz cubica."))
+'calculos / operações
+Select Case codigo
+    Case 1
+    numero = CDbl(InputBox("Entre com um numero real."))
+    n1 = numero ^ (2)
+    MsgBox numero & " Elevado ao quadrado é = " & n1
+    Case 2
+    numero = CDbl(InputBox("Entre com um numero real."))
+    n2 = numero ^ (3)
+    MsgBox numero & " Elevado ao cubo é = " & n2
+    Case 3
+    numero = CDbl(InputBox("Entre com um numero real."))
+    n3 = numero ^ (3)
+    MsgBox numero & " Tem como raiz quadrada: " & n3
+    Case 4
+    numero = CDbl(InputBox("Entre com um numero real."))
+    n4 = numero ^ (3)
+    MsgBox numero & " Tem como raiz cubica: " & n4
+    Case Else
+    MsgBox "Nenhuma opção válida selecionada."
+End Select
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------
+Option Explicit
+
+'Elabore um programa em VBA que receba a altura e o sexo de uma pessoa (M- masculino ou F –
+'feminino) e mostre o seu sexo e o peso ideal, utilizando-se a formula abaixo:
+'M – para homens peso ideal = (72,7 * altura) – 58
+'F – para mulheres peso ideal = (62,1 * altura) - 44,7
+
+Sub EXEC3()
+'declaração de variaveis
+Dim M As String, F As String, codigo As String, altura As Double, pesoi As Double
+'leitura de dados
+codigo = CStr(InputBox("Entre com (F) ou (M) para definir o sexo:" & vbCrLf & vbCrLf & "M - Se seu sexo for masculino." & vbCrLf & "F - Se seu sexo for feminino."))
+'calculos / operações
+Select Case codigo
+    Case "M"
+    altura = CDbl(InputBox("Qual sua altura atual em metros?"))
+    pesoi = (72.7 * altura) - 58
+    MsgBox " Seu peso ideal seria de: " & pesoi
+    Case "F"
+    altura = CDbl(InputBox("Qual sua altura atual em metros?"))
+    pesoi = (62.1 * altura) - 44.7
+    MsgBox " Seu peso ideal seria de: " & pesoi
+    Case Else
+    MsgBox "Nenhuma opção válida selecionada."
+End Select
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------
+Option Explicit
+
+Sub EXEC04()
+'declaração de variaveis
+Dim qtde As Integer, codigo As Integer
+Dim procedencia As String, preco As Double
+Dim valor As Double, s As String
+'leitura de dados
+qtde = CInt(InputBox("Entre com a quantidade de produtos "))
+codigo = CInt(InputBox("Entre com o codigo do produto (1...50)"))
+'calculos/operações
+Select Case codigo
+Case 1
+    procedencia = "Sul"
+    preco = 12.45
+Case 2
+    procedencia = "Norte"
+    preco = 21.45
+Case 3, 4
+    procedencia = "Leste"
+    preco = 23.45
+Case 5, 6
+    procedencia = "Oeste"
+    preco = 25.34
+Case 7 To 10
+    procedencia = "Sudeste"
+    preco = 28.56
+Case 11 To 20
+    procedencia = "Nordeste"
+    preco = 21.87
+Case 21, 22
+    procedencia = "Sudoeste"
+    preco = 28.65
+Case 23 To 50
+    procedencia = "Noroeste"
+    preco = 29.43
+End Select
+valor = qtde * preco
+'saida de dados
+s = "A quantidade de produtos é de: " & qtde
+s = s & vbCrLf & "O código é: " & codigo
+s = s & vbCrLf & "A procedencia é: " & procedencia
+s = s & vbCrLf & "O preço unitário é de: " & preco
+s = s & vbCrLf & "O valor final é de: " & valor
+
+MsgBox s
+End Sub
+---------------------------------------------------------------------------------------------------------------------------------
+Option Explicit
+
+'Elabore um programa em VBA que receba o numero de horas trabalhadas, o valor do salario
+'minimo e o código (1- Escritório, 2- Produção, 3-Portaria, 4-Gerência) referente a área onde o
+'funcionário trabalha. Calcule e mostre o salario final a receber de acordo com as seguinte regras:
+
+Sub EXEC5()
+'declaração de variaveis
+Dim sal As Double, codigo As Integer, horas As Double, vhora As Double
+Dim salb As Double, imposto As Double, sal_fin As Double
+Dim cargo As String, s As String
+'leitura de dados
+horas = CDbl(InputBox("Entre com a quantidade de horas trabalhadas:"))
+codigo = CInt(InputBox("Entre com o codigo do cargo." & vbCrLf & "1 - Escritório" & vbCrLf & _
+"2 - Produção" & vbCrLf & "3 - Portaria" & vbCrLf & "4 - Gerência"))
+'calculos / operações
+Select Case codigo
+    Case 1
+    sal = CDbl(InputBox("Entre com o salario minimo."))
+    imposto = (5 / 100)
+    vhora = 59.9
+    'b
+    If vhora < (sal / 8) Then
+        vhora = (sal / 8) + ((5 / 100) * vhora)
+        'c
+        salb = horas * vhora
+        'd
+        If (salb > 2300) And (salb < 5000) Then
+            salb = salb + (0.1328 * salb)
+            End If
+        'e / f
+        salb = salb - imposto
+        'g
+        s = "O cargo é de Escritório."
+        s = s & vbCrLf & "A quantidade de horas trabalhadas foi de: " & horas
+        s = s & vbCrLf & "O valor do salário mínimo é de: " & sal
+        s = s & vbCrLf & "Nestas condições o valor pago por hora é de: " & vhora
+        s = s & vbCrLf & "A porcentagem paga de imposto foi de: " & "5%"
+        s = s & vbCrLf & "O salário final pago foi de: " & salb
+        MsgBox s
+    End If
+    Case 2
+    sal = CDbl(InputBox("Entre com o salario minimo."))
+    imposto = (6 / 100)
+    vhora = 89.9
+    'b
+    If vhora < (sal / 8) Then
+        vhora = (sal / 8)
+        'c
+        salb = horas * vhora
+        'e / f
+        salb = salb - imposto
+        'g
+        s = "O cargo é de Produção."
+        s = s & vbCrLf & "A quantidade de horas trabalhadas foi de: " & horas
+        s = s & vbCrLf & "O valor do salário mínimo é de: " & sal
+        s = s & vbCrLf & "Nestas condições o valor pago por hora é de: " & vhora
+        s = s & vbCrLf & "A porcentagem paga de imposto foi de: " & "6%"
+        s = s & vbCrLf & "O salário final pago foi de: " & salb
+        MsgBox s
+    End If
+    Case 3
+    sal = CDbl(InputBox("Entre com o salario minimo."))
+    imposto = (8 / 100)
+    vhora = 120.98
+    'b
+    If vhora < (sal / 8) Then
+        vhora = (sal / 8) + ((5 / 100) * vhora)
+        'c
+        salb = horas * vhora
+        'd
+        If (salb > 2300) And (salb < 5000) Then
+            salb = salb + (0.1328 * salb)
+            End If
+        'e / f
+        salb = salb - imposto
+        'g
+        s = "O cargo é de Portaria."
+        s = s & vbCrLf & "A quantidade de horas trabalhadas foi de: " & horas
+        s = s & vbCrLf & "O valor do salário mínimo é de: " & sal
+        s = s & vbCrLf & "Nestas condições o valor pago por hora é de: " & vhora
+        s = s & vbCrLf & "A porcentagem paga de imposto foi de: " & "8%"
+        s = s & vbCrLf & "O salário final pago foi de: " & salb
+        MsgBox s
+    End If
+    Case 4
+    sal = CDbl(InputBox("Entre com o salario minimo."))
+    imposto = (10 / 100)
+    vhora = 130.87
+    'b
+    If vhora < (sal / 4) Then
+        vhora = (sal / 4)
+        'c
+        salb = horas * vhora
+        'e / f
+        salb = salb - imposto
+        'g
+        s = "O cargo é de Gerência."
+        s = s & vbCrLf & "A quantidade de horas trabalhadas foi de: " & horas
+        s = s & vbCrLf & "O valor do salário mínimo é de: " & sal
+        s = s & vbCrLf & "Nestas condições o valor pago por hora é de: " & vhora
+        s = s & vbCrLf & "A porcentagem paga de imposto foi de: " & "10%"
+        s = s & vbCrLf & "O salário final pago foi de: " & salb
+        MsgBox s
+    End If
+End Select
+End Sub

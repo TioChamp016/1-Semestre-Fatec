@@ -1,0 +1,130 @@
+programa
+{
+	funcao inicio()
+	{
+	/* Exercício 40: Faça um algoritmo que receba a nota de 20 alunos, e depois
+	mostre a quantidade de alunos aprovados e a quantidade de alunos reprovados. */
+	real nota, totalNotas, mediaNotas
+	inteiro alunos, a
+	alunos = 20
+	totalNotas = 0
+	mediaNotas = 0
+		para (inteiro i = 1; i <= 20; i++) {
+			escreva("Insira a nota do ", i, "º aluno...........: ")
+			leia(nota)
+			totalNotas = totalNotas + nota
+			se (nota >= 6) {
+				alunos = alunos + 0
+			}	senao {
+					alunos = alunos - 1
+				}
+		}
+	mediaNotas = (totalNotas / 20)
+	escreva("A quantidade de alunos aprovados é...: ", alunos)
+	escreva("\nA quantidade de alunos reprovados é..: ", 20 - alunos)
+	escreva("\nA soma de todas as notas é...........: ", totalNotas)
+	escreva("\nA média de notas da turma é..........: ", mediaNotas)
+	}
+}
+
+
+programa
+{
+	funcao inicio()
+	{
+	/* Construa um programa que receba 30 numeros inteiros,
+	e mostre qual foi o maior número digitado. */
+	inteiro num, numero
+	numero = 0
+		para (inteiro i = 1; i <= 30; i++) {
+			escreva("Insira o ", i, "º número de 30 numeros...: ")
+			leia(num)
+			se (num > numero) {
+				numero = num
+			}	senao {
+					numero = numero
+				}
+		}
+		escreva("Dos numeros informados, o maior é..: ", numero)
+	}
+}
+
+
+
+programa
+{
+	funcao inicio()
+	{
+	/* 42.Faça uma estrutura de repetição que peça para o usuário digitar o nome e a idade de 10 pessoas. 
+	Mostre as seguintes informações:
+	a: qual foi a maior idade digitada?
+	b: quantas pessoas tem menos que 18 anos?
+	c: quantas pessoas tem 18 anos ou mais?
+	d: qual a soma total das idades?
+	e: qual a média das idades digitadas?
+	f: qual é o nome da pessoa com maior idade? */
+	cadeia nome, nome1
+	inteiro idade, maiorIdade, deMaior, somaIdades
+	maiorIdade = 0
+	deMaior = 0
+	somaIdades = 0
+	nome1 = "abobrinha"
+		para (inteiro i = 1; i <= 10; i++) {
+			escreva("Insira o nome da ", i, "º pessoa....: ")
+			leia(nome)
+			escreva("Qual a idade de ", nome, " ? ")
+			leia(idade)
+			somaIdades = somaIdades + idade
+			se (idade > maiorIdade) {
+				maiorIdade = idade
+				nome1 = nome
+			}
+			se (idade >= 18) {
+				deMaior = deMaior + 1
+			}
+		}
+		
+		escreva("A maior idade digitada foi: ", maiorIdade, "\n")
+		escreva((10 - deMaior), " pessoas tem menos de 18 anos.", "\n")
+		escreva(deMaior, " pessoas tem 18 anos ou mais.", "\n")
+		escreva("A soma total das idades é: ", somaIdades, "\n")
+		escreva("A média das idades é: ", (somaIdades / 10.0), "\n")
+		escreva("A pessoa com maior idade é: ", nome1)
+	}
+}
+
+
+programa
+{
+	funcao inicio()
+	{
+	/* 43. Foi realizada uma pesquisa na porta do cinema para saber a opinião das pessoas sobre o filme que acabaram de ver.
+	As pessoas poderiam responder como o filme sendo 1-bom ou 2-ruim, além de ter que especificar seu genero.
+	Crie um algoritmo que receba a resposta da pesquisa de 30 pessoas, e mostre a quantidade de homens que gostaram do filme e
+	dos que não gostaram, e depois a quantidade das mulheres que gostaram do filme e das que não gostaram. */
+	inteiro opniao, genero, fem1, masc1, fem2, masc2, bom, ruim
+	fem1 = 0
+	fem2 = 0
+	masc1 = 0
+	masc2 = 0
+		para (inteiro i = 1; i <= 3; i++) {
+			escreva("Qual o genero da pessoa? 1-Mulher OU 2-Homem: ")
+			leia(genero)
+			escreva("Qual a opnião informada? 1-Bom OU 2-Ruim: ")
+			leia(opniao)
+			se (genero == 1 e opniao == 1) {
+				fem1 = fem1 + 1
+			}	senao se (genero == 1 e opniao == 2) {
+					fem2 = fem2 + 1
+			}		senao se (genero == 2 e opniao == 1) {
+						masc1 = masc1 + 1
+			}			senao se (genero == 2 e opniao == 2) {
+							masc2 = masc2 + 1
+			}
+		}
+		escreva("A quantidade de mulheres que gostaram do filme é: ", fem1)
+		escreva("\nA quantidade de mulheres que não gostaram do filme é: ", fem2)
+		escreva("\nA quantidade de homens que gostaram do filme é: ", masc1)
+		escreva("\nA quantidade de homens que não gostaram do filme é: ", masc2)
+	}
+}

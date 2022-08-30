@@ -1,0 +1,118 @@
+Option Explicit
+
+Sub Extra01()
+'declaração de variaveis
+Dim sal As Double, idade As Integer, t As Integer, reg As String
+Dim bon_per As Double, bon_valor As Double, aux_per As Double, aux_valor As Double
+Dim imposto_per As Double, imposto As Double, sal_fin As Double, s As String
+'leitura de dados
+sal = CDbl(InputBox("Entre com o salario base:"))
+idade = CInt(InputBox("Entre com a idade do funcionario:"))
+t = CInt(InputBox("Entre com o tempo de serviço do funcionário:"))
+reg = InputBox(" N - Norte, S - Sul, L - Leste, O - Oeste ")
+'calculos / operações
+bon_per = 8.6 ' inicializar variavel
+'If sal <= 1200 And idade <= 20 And t <= 3 Then
+If sal <= 1200 Then 'condicional salario
+    If idade <= 20 Then
+        If t <= 3 Then
+            bon_per = 5.8
+    End If
+    ElseIf idade >= 25 And idade <= 35 Then
+        If t >= 4 And t <= 10 Then
+            bon_per = 7.8
+        ElseIf t >= 11 And t <= 12 Then
+            bon_per = 8.3
+        End If ' fim do tempo
+    End If ' fim da idade
+    ElseIf sal >= 1500 And sal <= 3500 Then
+        If idade >= 20 And idade <= 34 Then
+            If t <= 5 Then
+                bon_per = 9.4
+            End If ' fim tempo
+        End If ' fim idade
+    ElseIf sal > 5000 Then
+        If idade >= 23 And idade <= 40 Then
+            If t >= 3 And t <= 8 Then
+                bon_per = 10.2
+                ElseIf t >= 10 And t <= 15 Then
+                    bon_per = 11.5
+            End If ' fim tempo
+        End If ' fim idade
+    End If
+bon_valor = sal * (bon_per / 100)
+Select Case reg
+    Case "N", "n"
+        If idade >= 23 And idade <= 30 Then
+            aux_per = 12
+            reg = "Norte"
+            ElseIf idade >= 40 And idade <= 50 Then
+                aux_per = 12.7
+                reg = "Norte"
+                Else
+                    aux_per = 18.6
+                    reg = "Norte"
+        End If
+    Case "L", "l"
+        If idade <= 30 Then
+            aux_per = 13.8
+            reg = "Leste"
+            ElseIf idade >= 35 And idade <= 65 Then
+                aux_per = 14.7
+                reg = "Leste"
+                Else
+                    aux_per = 18.6
+                    reg = "Leste"
+        End If
+    Case "O", "o"
+        If idade <= 30 Then
+            aux_per = 13.8
+            reg = "Oeste"
+            ElseIf idade >= 35 And idade <= 65 Then
+                aux_per = 14.7
+                reg = "Oeste"
+                Else
+                    aux_per = 18.6
+                    reg = "Oeste"
+        End If
+    Case "S", "s"
+        If idade <= 25 Then
+            aux_per = 15.8
+            reg = "Sul"
+            ElseIf idade >= 34 And idade <= 49 Then
+                aux_per = 16.9
+                reg = "Sul"
+                ElseIf idade >= 55 Then
+                    aux_per = 19.7
+                    reg = "Sul"
+                    Else
+                        aux_per = 18.6
+                        reg = "Sul"
+        
+        End If
+End Select
+aux_valor = (sal + bon_valor) * (aux_per / 100)
+'calculo imposto
+    If (sal >= 1000 And sal <= 2500) And t >= 5 Then
+        imposto_per = 3.6
+        ElseIf (sal > 2500 And sal <= 3500) And idade >= 40 Then
+            imposto_per = 5.6
+            Else
+            imposto_per = 6
+    End If
+imposto = (sal + bon_valor + aux_valor) * (imposto_per / 100)
+sal_fin = sal + bon_valor + aux_valor - imposto
+'saida de dados
+s = "Salario do funcionario = " & sal & " reais"
+s = s & vbCrLf & "Idade do funcionario = " & idade & " anos"
+s = s & vbCrLf & "Tempo de serviço do funcionário: " & t & " anos"
+s = s & vbCrLf & "A região é: " & reg
+s = s & vbCrLf & "Percentual de bonificação: " & bon_per & " %"
+s = s & vbCrLf & "Valor da bonificação = " & bon_valor & " reais"
+s = s & vbCrLf & "Percentual do auxilio moradia: " & aux_per & " %"
+s = s & vbCrLf & "Valor do auxilio moradia = " & FormatNumber(aux_valor, 2) & " reais"
+s = s & vbCrLf & "Imposto em percentual: " & imposto_per & " %"
+s = s & vbCrLf & "Imposto em valor = " & FormatNumber(imposto, 2) & " reais"
+s = s & vbCrLf & "Salario final = " & FormatNumber(sal_fin, 2) & " reais"
+MsgBox s
+End Sub

@@ -1,0 +1,42 @@
+Option Explicit
+
+Sub dia30do08de2021()
+
+'declaração variaveis
+Dim n1 As Integer, n2 As Double
+Dim s1 As String, s2 As String
+
+'leitura de dados
+n1 = CInt(InputBox("Entre com um numero inteiro"))
+n2 = CDbl(InputBox("Entre com um numero real"))
+
+Cells(1, 1).Value = n1
+Cells(1, 2).Value = n2
+s1 = " O numero inteiro digitado = " & n1
+s2 = " O numero real digitado = " & n2
+
+MsgBox s1 & vbCrLf & s2
+
+End Sub
+----------------------------------------------------------
+Option Explicit
+
+Sub dia30do08de2021()
+
+'declaração variaveis
+Dim n1 As Integer, n2 As Double
+Dim s1 As String, s2 As String
+
+'leitura de dados
+n1 = CInt(InputBox("Entre com um numero inteiro"))
+n2 = CDbl(InputBox("Entre com um numero real"))
+
+Cells(1, 1).Value = n1
+Cells(1, 2).Value = n2
+s1 = " O numero inteiro digitado = " & n1
+s1 = s1 & vbCrLf & " O numero real digitado = " & n2
+s1 = s1 & vbCrLf & " O numero real digitado = " & n2 + 10
+
+MsgBox s1
+
+End Sub

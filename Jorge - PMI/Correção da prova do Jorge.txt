@@ -1,0 +1,119 @@
+Option Explicit
+
+Sub prova01()
+'Declaração de variaveis
+Dim op As Integer, s As String
+Dim sal As Double, imposto_per As Double, imposto As Double
+Dim novo_sal As Double
+Dim aum_per As Double, aumento As Double
+Dim s2 As String
+'Leitura de Dados
+op = CInt(InputBox(" 1 - Imposto " & vbCrLf & " 2 - Novo Salario " & vbCrLf & " 3 - Classificação " & vbCrLf & " Escolha 1 das 3 opções: "))
+'Calculos e Operações
+Select Case op
+	Case 1
+	sal = CDbl(InputBox(" Entre com o salario: "))
+	s = " O salario base = " & sal
+	If sal < 700 Then
+		imposto_per = 5
+		ElseIf sal > 700 And sal <= 1250 Then
+			imposto_per = 10
+			ElseIf sal > 1250 And sal <= 2400 Then
+				imposto_per = 12
+				ElseIf sal > 2400 Then
+					imposto_per = 15
+	End If
+		imposto = sal * (imposto_per / 100)
+		novo_sal = sal - imposto
+		s = s & vbCrLf & " O percentual de imposto = " & imposto_per & "%"
+		s = s & vbCrLf & " O valor do imposto = " & imposto
+		s = s & vbCrLf & " O salario sem imposto = " & novo_sal
+	Case 2
+	sal = CDbl(InputBox(" Entre com o salario: "))
+	s = " O salario base = " & sal
+	aum_per = 6.5
+	If sal >= 5400 Then
+		aum_per = 3.2
+		ElseIf sal < 5400 And sal > 3650 Then
+			aum_per = 3.8
+			ElseIf sal < 2350 And sal > 1200 Then
+				aum_per = 4.8
+				ElseIf sal < 1050 Then
+					aum_per = 7.5
+						'Else
+						'aum_per = 6.5
+	End If
+		aumento = sal * (aumento_per / 100)
+		novo_sal = sal + aumento
+		s = s & vbCrLf & " O percentual de aumento = " & aum_per & "&"
+		s = s & vbCrLf & " O aumento em valor = " & aumento
+		s = s & vbCrLf & " O novo salario = " & novo_sal
+	Case 3
+	sal = CDbl(InputBox(" Entre com o salario: "))
+	s = " O salario base = " & sal
+	If sal < 2850 Then
+		s = s &vbCrLf & " Mal remunerado "
+		ElseIf sal >= 2850 And sal <= 5400 Then
+			s = s & vbCrLf & " Remuneração média "
+			ElseIf sal > 5400 Then
+				s = s & vbCrLf & " Bem remunerado "
+	End If
+	Case Else
+		s = " Opção Invalida "
+End Select
+	MsgBox s
+End Sub
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Option Explicit
+
+Sub prova02()
+'Declaração de variaveis
+Dim vendas As Double, preco As Double, reajuste As Double, novo As Double
+Dim s As String
+'Leitura de dados
+vendas = CDbl(InputBox(" O total de vendas foi de: "))
+preco = CDbl(InputBox(" Entre com o preco atual do produto: "))
+s = " O valor das vendas = " & vendas
+s = s & vbCrLf & " O preço base do produto = " & preco
+'Calculos/Operações
+    'reajuste = 11.87
+    If vendas < 5000 And preco < 12.4 Then
+        reajuste = 8.23
+        novo = preco + preco * (reajuste / 100)
+        s = s & vbCrLf & " O aumento foi de = " & reajuste & "%"
+        s = s & vbCrLf & " O novo valor = " & FormatNumber(novo, 2)
+        ElseIf (vendas >= 5000 And vendas <= 7234) And (preco >= 9.23 And preco <= 12.54) Then
+            reajuste = 9.28
+            novo = preco + preco * (reajuste / 100)
+            s = s & vbCrLf & " O aumento foi de = " & reajuste & "%"
+            s = s & vbCrLf & " O novo valor = " & FormatNumber(novo, 2)
+            ElseIf (vendas >= 7500 And vendas <= 8543) And (preco >= 10.89 And preco <= 14.49) Then
+                reajuste = 10.25
+                novo = preco + preco * (reajuste / 100)
+                s = s & vbCrLf & " O aumento foi de = " & reajuste & "%"
+                s = s & vbCrLf & " O novo valor = " & FormatNumber(novo, 2)
+                ElseIf (vendas >= 9879 And vendas <= 12765) And (preco >= 14.54 And preco <= 15.87) Then
+                    reajuste = 12.9
+                    novo = preco - preco * (reajuste / 100)
+                    s = s & vbCrLf & " A redução foi de = " & reajuste & "%"
+                    s = s & vbCrLf & " O novo valor = " & FormatNumber(novo, 2)
+                    ElseIf (vendas >= 13876 And vendas <= 16872.9) And (preco >= 16.87 And preco <= 17.87) Then
+                        reajuste = 13.87
+                        novo = preco - preco * (reajuste / 100)
+                        s = s & vbCrLf & " A redução foi de = " & reajuste & "%"
+                        s = s & vbCrLf & " O novo valor = " & FormatNumber(novo, 2)
+                        ElseIf vendas > 117874.2 And preco >= 18.75 Then
+                            reajuste = 14.76
+                            novo = preco - preco * (reajuste / 100)
+                            s = s & vbCrLf & " A redução foi de = " & reajuste & "%"
+                            s = s & vbCrLf & " O novo valor = " & FormatNumber(novo, 2)
+                                Else
+                                reajuste = 11.87
+                                novo = preco + preco * (reajuste / 100)
+                                s = s & vbCrLf & " O aumento foi de = " & reajuste & "%"
+                                s = s & vbCrLf & " O novo valor = " & FormatNumber(novo, 2)
+    End If
+    MsgBox s
+End Sub

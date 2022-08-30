@@ -1,0 +1,191 @@
+Option Explicit
+
+Sub exercicio04()
+
+'Questão 01: Elabore um programa que apresente um menu de opções que permite ao usuário
+'escolher a opção desejada, receba os dados necessários para executar a operação e mostre o
+'resultado. Verifique a possibilidade de opção inválida (neste caso deverá mostrar um mensagem
+'de mensagem “Opção Inválida”) e não se preocupe com restrições como salário negativo.
+
+'declaração de variaveis
+Dim codigo As Integer
+Dim impostos As String, aumentos As String, s As String, classificar As String
+Dim salario As Double, imposto As Double, aumento As Double
+'leitura de dados
+codigo = CInt(InputBox("1. Imposto" & vbCrLf & "2. Novo Salário" & vbCrLf & "3. Classificação" & vbCrLf & vbCrLf & "Escolha 1 das 3 opções: "))
+salario = CInt(InputBox("Qual o valor do salário do funcionário? "))
+'informação de dados
+'calculos/operações
+Select Case codigo
+Case 1
+    If (salario <= 700) Then
+    impostos = "5%"
+    imposto = (0.05 * salario)
+    s = "O percentual de imposto é de: " & impostos
+    s = s & vbCrLf & "O valor do imposto é de: " & imposto
+    s = s & vbCrLf & "O salário atual é de: " & (salario - imposto)
+    MsgBox s
+        ElseIf (700 < salario) And (salario < 1250) Then
+        impostos = "10%"
+        imposto = (0.1 * salario)
+        s = "O percentual de imposto é de: " & impostos
+        s = s & vbCrLf & "O valor do imposto é de: " & imposto
+        s = s & vbCrLf & "O salário atual é de: " & (salario - imposto)
+        MsgBox s
+            ElseIf (1250 < salario) And (salario < 2400) Then
+            impostos = "12%"
+            imposto = (0.12 * salario)
+            s = "O percentual de imposto é de: " & impostos
+            s = s & vbCrLf & "O valor do imposto é de: " & imposto
+            s = s & vbCrLf & "O salário atual é de: " & (salario - imposto)
+            MsgBox s
+                ElseIf (salario > 2400) Then
+                impostos = "15%"
+                imposto = (0.15 * salario)
+                s = "O percentual de imposto é de: " & impostos
+                s = s & vbCrLf & "O valor do imposto é de: " & imposto
+                s = s & vbCrLf & "O salário atual é de: " & (salario - imposto)
+                MsgBox s
+    End If
+Case 2
+    If (salario >= 5400) Then
+    aumentos = "3,2%"
+    aumento = (0.032 * salario)
+    s = "O percentual de aumento é de: " & aumentos
+    s = s & vbCrLf & "O valor do aumento é de: " & aumento
+    s = s & vbCrLf & "O valor do novo salário é de: " & (salario + aumento)
+    MsgBox s
+        ElseIf (5400 > salario) And (salario >= 3650) Then
+        aumentos = "3,8%"
+        aumento = (0.038 * salario)
+        s = "O percentual de aumento é de: " & aumentos
+        s = s & vbCrLf & "O valor do aumento é de: " & aumento
+        s = s & vbCrLf & "O valor do novo salário é de: " & (salario + aumento)
+        MsgBox s
+            ElseIf (3650 > salario) And (salario >= 2350) Then
+            aumentos = "6,5%"
+            aumento = (0.065 * salario)
+            s = "O percentual de aumento é de: " & aumentos
+            s = s & vbCrLf & "O valor do aumento é de: " & aumento
+            s = s & vbCrLf & "O valor do novo salário é de: " & (salario + aumento)
+            MsgBox s
+                ElseIf (2350 > salario) And (salario >= 1200) Then
+                aumentos = "4,8%"
+                aumento = (0.048 * salario)
+                s = "O percentual de aumento é de: " & aumentos
+                s = s & vbCrLf & "O valor do aumento é de: " & aumento
+                s = s & vbCrLf & "O valor do novo salário é de: " & (salario + aumento)
+                MsgBox s
+                    ElseIf (1200 > salario) And (salario >= 1050) Then
+                    aumentos = "6,5%"
+                    aumento = (0.065 * salario)
+                    s = "O percentual de aumento é de: " & aumentos
+                    s = s & vbCrLf & "O valor do aumento é de: " & aumento
+                    s = s & vbCrLf & "O valor do novo salário é de: " & (salario + aumento)
+                    MsgBox s
+                        ElseIf (salario < 1050) Then
+                        aumentos = "7,5%"
+                        aumento = (0.075 * salario)
+                        s = "O percentual de aumento é de: " & aumentos
+                        s = s & vbCrLf & "O valor do aumento é de: " & aumento
+                        s = s & vbCrLf & "O valor do novo salário é de: " & (salario + aumento)
+                        MsgBox s
+    End If
+Case 3
+    If (salario <= 2850) Then
+    classificar = "Mal remunerado"
+    s = "O salário do funcionário é de: " & salario
+    s = s & vbCrLf & "E este funcionário é: " & classificar
+    MsgBox s
+        ElseIf (2850 < salario) And (salario <= 5400) Then
+        classificar = "Remuneração média"
+        s = "O salário do funcionário é de: " & salario
+        s = s & vbCrLf & "E este funcionário tem uma: " & classificar
+        MsgBox s
+            ElseIf (salario > 5400) Then
+            classificar = "Bem remunerado"
+            s = "O salário do funcionário é de: " & salario
+            s = s & vbCrLf & "E este funcionário é: " & classificar
+            MsgBox s
+    End If
+End Select
+End Sub
+
+
+
+
+
+
+
+
+
+
+Option Explicit
+
+Sub exercicio04()
+
+'Questão 02: Um supermercado deseja reajustar os preços de seus produtos usando o seguinte
+'critério: o produto poderá ter seu preço aumentado ou diminuído (conforme a situação). Para
+'alterar o preço do produto deve preencher pelo menos um dos requisitos a seguir.
+
+'declaração de variaveis
+Dim impostos As String, aumentos As String, reducaos As String, s As String
+Dim vmm As LongLong, precoA As Double, aumento As Double, reducao As Double
+'leitura de dados
+vmm = CLng(InputBox("Qual o valor das vendas mensais médias? "))
+precoA = CInt(InputBox("Qual o valor do preço atual? "))
+'processamento
+    If (vmm < 5000) And (precoA < 12.4) Then
+    aumentos = "8,23%"
+    aumento = (0.0823 * precoA)
+    s = "O percentual de aumento é de: " & aumentos
+    s = s & vbCrLf & "O valor do aumento é de: " & FormatNumber(aumento, 2)
+    s = s & vbCrLf & "O novo valor do produto é de: " & FormatNumber(precoA + aumento)
+    MsgBox s
+        ElseIf ((7234 >= vmm) And (vmm >= 5000)) And ((precoA >= 9.23) And (precoA <= 12.54)) Then
+        aumentos = "9,28%"
+        aumento = (0.0928 * precoA)
+        s = "O percentual de aumento é de: " & aumentos
+        s = s & vbCrLf & "O valor do aumento é de: " & FormatNumber(aumento, 2)
+        s = s & vbCrLf & "O novo valor do produto é de: " & FormatNumber(precoA + aumento)
+        MsgBox s
+            ElseIf ((8543 >= vmm) And (vmm >= 7500)) And ((precoA >= 10.89) And (precoA <= 14.49)) Then
+            aumentos = "10,25%"
+            aumento = (0.1025 * precoA)
+            s = "O percentual de aumento é de: " & aumentos
+            s = s & vbCrLf & "O valor do aumento é de: " & FormatNumber(aumento, 2)
+            s = s & vbCrLf & "O novo valor do produto é de: " & FormatNumber(precoA + aumento)
+            MsgBox s
+                ElseIf ((12765 >= vmm) And (vmm >= 9879)) And ((precoA >= 14.54) And (precoA <= 15.87)) Then
+                reducaos = "12,9%"
+                reducao = (0.129 * precoA)
+                s = "O percentual de aumento é de: " & reducaos
+                s = s & vbCrLf & "O valor do aumento é de: " & FormatNumber(reducao, 2)
+                s = s & vbCrLf & "O novo valor do produto é de: " & FormatNumber(precoA + reducao)
+                MsgBox s
+                    ElseIf ((16872.9 >= vmm) And (vmm >= 13876)) And ((precoA >= 16.87) And (precoA <= 17.87)) Then
+                    reducaos = "13,87%"
+                    reducao = (0.1387 * precoA)
+                    s = "O percentual de aumento é de: " & reducaos
+                    s = s & vbCrLf & "O valor do aumento é de: " & FormatNumber(reducao, 2)
+                    s = s & vbCrLf & "O novo valor do produto é de: " & FormatNumber(precoA + reducao)
+                    MsgBox s
+                        ElseIf (vmm > 117874.2) And (precoA > 18.75) Then
+                        reducaos = "14,76%"
+                        reducao = (0.1476 * precoA)
+                        s = "O percentual de aumento é de: " & reducaos
+                        s = s & vbCrLf & "O valor do aumento é de: " & FormatNumber(reducao, 2)
+                        s = s & vbCrLf & "O novo valor do produto é de: " & FormatNumber(precoA + reducao)
+                        MsgBox s
+                            Else: aumento = (0.1476 * precoA)
+                                aumentos = "11,87%"
+                                s = "O percentual de aumento é de: " & aumentos
+                                s = s & vbCrLf & "O valor do aumento é de: " & FormatNumber(aumento, 2)
+                                s = s & vbCrLf & "O novo valor do produto é de: " & FormatNumber(precoA + aumento)
+                                MsgBox s
+End If
+End Sub
+
+
+sqr(x)
+y = x^(1/2)

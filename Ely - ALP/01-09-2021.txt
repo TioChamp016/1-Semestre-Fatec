@@ -1,0 +1,166 @@
+programa
+{
+    funcao inicio()
+    {
+        /*15 - Receba 2 notas de um aluno. Calcule sua média
+        e mostre se ele foi aprovado ou reprovado.*/
+        real nota1, nota2
+        real media
+        //entrada
+        escreva("Digite a primeira nota: ")
+        leia(nota1)
+        escreva("Digite a segunda nota: ")
+        leia(nota2)
+        //processamento
+        media = (nota1+nota2)/2
+        //saída
+        escreva("\nMédia: ", media)
+        se (media >= 6) {
+            escreva("\nAluno aprovado")
+        } senao {
+            escreva("\nAluno reprovado")
+        }
+    }
+}
+
+
+programa
+{
+    funcao inicio()
+    {
+        /*16 - peça para o usuário digitar o seu ano de nascimento. Calcule a sua idade e mostre se ele pode entrar na balada ou não.
+        Menores de 18 anos não entram na balada.*/
+        inteiro nasci, idade
+        //entrada
+        escreva("Digite seu ano de nascimento: ")
+        leia(nasci)
+        //processamento
+        idade = 2021 - nasci
+        //saída
+        escreva("\nIdade: ", idade)
+        se (idade >= 18) {
+            escreva("\nPode entrar!")
+        } senao {
+            escreva("\nNão entre!")
+        }
+    }
+}
+
+
+programa
+{
+    funcao inicio()
+    {
+        /*17. Peça para o usuário digitar o nome (em uma variável do tipo Cadeia) e idade de duas pessoas. Mostre o nome da pessoa mais nova.*/
+        cadeia nome1, nome2, mostrar
+        inteiro  idade1, idade2
+        //entrada
+        escreva("Digite o nome de alguem: ")
+        leia(nome1)
+        escreva("Quantos anos ", nome1, " tem? ")
+        leia(idade1)
+        escreva("Digite o nome de outrem: ")
+        leia(nome2)
+        escreva("Quantos anos ", nome2, " tem? ")
+        leia(idade2)
+        //processamento
+        mostrar = idade1 - idade2
+        //saída
+        escreva("O mais jovem é: ")
+        se (mostrar < 0) {
+            escreva("\n", nome1)
+        } senao {
+            escreva("\n", nome2)
+        }
+    }
+}
+
+
+programa
+{
+    funcao inicio()
+    {
+        /*20. Peça para o usuário digitar o preço e quantidade de um produto. Numa loja é dado 10% de desconto quando o cliente 
+        compra 5 unidades ou mais do mesmo produto. Mostre qual seria o valor a ser pago neste compra.*/
+        real preco, quantidade, total, totald
+        //entrada
+        escreva("Qual o valor do produto....: ")
+        leia(preco)
+        escreva("Quantos produtos vai levar.: ")
+        leia(quantidade)
+        //processamento
+        total = preco * quantidade	
+        totald = (preco * quantidade) * 0.9
+        //saída
+        escreva("O valor a pagar é de: ")
+        se (quantidade < 5) {
+            escreva(total, " reais")
+        } senao {
+            escreva(totald, " reais")
+        }
+    }
+}
+
+
+programa
+{
+    funcao inicio()
+    {
+        /*21. Peça para o usuário digitar a sua altura e peso. calcule o seu IMC através da fórmula (IMC = peso/(altura*altura)).
+        Mostre uma mensagem de que a pessoa está com peso correto quando o IMC for menor que 25, e informe que está de sobrepeso caso contrário.*/
+        real altura, peso, imc
+        //entrada
+        escreva("Qual a altura em metros.? ")
+        leia(altura)
+        escreva("Qual o peso em kilos....? ")
+        leia(peso)
+        //processamento
+        imc = peso / (altura*altura)	
+        //saída
+        escreva("Você está: ")
+        se (imc < 25) {
+            escreva("com o peso correto.")
+        } senao {
+            escreva("com sobrepeso.")
+        }
+    }
+}
+
+
+programa
+{
+    funcao inicio()
+    {
+        /*21. considere que um carro faz 9km/litro de consumo com alcool. Já na gasolina ele faz 11km/litro. Faça um algoritmo em que
+        o usuário irá digitar a distância que deseja viajar, o preço do alcool e o preço do litro da gasolina. Calcule e mostre o valor
+        que será gasto caso abasteça com alcool e o valor gasto com gasolina.  Mostre ainda se compensa abastecer com alcool ou com gasolina.*/
+        //declaração das variáveis
+		  real kms, gasolina, alcool, gastoGasolina, gastoAlcool, litrosGasolina, litrosAlcool
+		  //entradas
+		  escreva("Quantos kilometros irá percorrer..: ")
+		  leia(kms)
+		  escreva("Qual o valor do litro de alcool...: ")
+		  leia(alcool)
+		  escreva("Qual o valor do litro de gasolina.: ")
+		  leia(gasolina)
+		  //processamento
+		  litrosGasolina = (kms / 11)
+		  litrosAlcool = (kms / 9)
+		  gastoGasolina = litrosGasolina * gasolina
+		  gastoAlcool = litrosAlcool * alcool
+		  //saídas
+		  escreva("Gasto andando com gasolina........: ", gastoGasolina, " \n")
+		  escreva("Gasto andando com alcool..........: ", gastoAlcool, " \n")
+        escreva("Para este caso, compensa você abastecer com: ")
+        se (gastoAlcool < gastoGasolina) {
+            escreva("Alcool.")
+        } senao {
+            escreva("Gasolina.")
+	}
+   }
+}
+
+
+21. Peça para o usuário digitar a sua altura e peso. calcule o seu IMC através da fórmula (IMC = peso/(altura*altura)). Mostre uma mensagem de que a pessoa está com peso correto quando o IMC for menor que 25, e informe que está de sobrepeso caso contrário.
+ 
+22. considere que um carro faz 9km/litro de consumo com alcool. Já na gasolina ele faz 11km/litro. Faça um algoritmo em que o usuário irá digitar a distância que deseja viajar, o preço do alcool e o preço do litro da gasolina. Calcule e mostre o valor que será gasto caso abasteça com alcool e o valor gasto com gasolina.  Mostre ainda se compensa abastecer com alcool ou com gasolina.

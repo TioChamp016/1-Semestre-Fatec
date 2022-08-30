@@ -1,0 +1,104 @@
+programa
+{
+	funcao inicio()
+	{
+		
+		inteiro produtora, superheroi
+
+		escreva("Digite a sua produtora preferida: 1-Marvel ou 2-DC\n")
+		leia(produtora)
+
+		se (produtora == 1) {
+			escreva("Digite o seu superheroi preferido: 1-Capitã Carter 2-Homem de Ferro\n")
+			leia(superheroi)
+			se(superheroi==1) {
+				escreva("Você escolheu a Capitã Carter")
+			} senao se (superheroi==2) {
+				escreva("Você escolheu o Homem de Ferro")
+			} senao se
+				escreva("Superheroi desconhecido")
+			}
+		} senao se (produtora == 2) {
+			escreva("Digite o seu superheroi preferido: 1-Batman 2-Superman\n")
+			leia(superheroi)
+			se(superheroi==1) {
+				escreva("I'am Batman")
+			} senao se (superheroi==2) {
+				escreva("Você escolheu o Superman")
+			} senao se
+				escreva("Superheroi desconhecido")
+			}
+		} senao {
+			escreva("produtora desconhecida")
+		}
+	}
+}
+
+programa
+{
+	funcao inicio()
+	{
+		/*Faça um algoritmo que calcule e imprima o valor da potência de x^n. O valor de n deve ser maior 
+		que 1 e inteiro e o valor de x maior ou igual a 2 e inteiro.*/
+		inteiro x, n, resultado
+		escreva("Entre com um numero inteiro maior ou igual a 2: ")
+			leia (x)
+		escreva("Entre com um numero inteiro maior que 1, para ser a potencia do numero informado anteriormente: ")
+			leia (n)
+		se (x >= 2) {
+			se (n > 1) {
+				resultado = (x ^ n)
+				escreva(x, " elevado a ", n, " = " resultado)
+			}
+		}
+		senao {
+			escreva("Algum numero informado não corresponde a condição solicitada. Tente novamente.\n")
+		}
+	}
+}
+
+
+programa
+{
+	funcao inicio()
+	{
+		/*Elabore um programa que calcule o fatorial de um número digitado pelo usuário (Numero!). 
+		 * Exemplo: 5! = 5*4*3*2*1 = 120*/
+		inteiro num, resultado
+		escreva("Entre com um numero inteiro: ")
+			leia (num)
+		resultado = num
+		para (inteiro i=1; i<num; i++) {
+			resultado = resultado * i
+		}
+			escreva(resultado)
+	}
+}
+
+
+programa
+{
+	funcao inicio()
+	{
+		/*Receba 2 números quaisquer do usuário. Mostre a ele a sequencia do primeiro número até o segundo.
+		 * Atente para casos onde a sequencia deverá ser retroativa.*/
+		inteiro n1, n2, sequencia, i
+		escreva("Entre com um numero inteiro: ")
+			leia (n1)
+		escreva("Entre com outro numero inteiro: ")
+			leia (n2)
+		se (n1 < n2) {
+			para (i=n1; i<=n2; i++) {
+			escreva(i, " ")
+			}
+		} senao {
+			para (i=n1; i>=n2; i--) {
+				escreva(i, " ")
+			}
+		}
+	}
+}
+
+
+
+39 A série de Fibonacci é formada pela seguinte seqüência: 0,1,1,2,3,5,8,13,21,34,55... etc. Escreva um algoritmo que gere a série de Fibonacci até o vigésimo termo utilizando uma estrutura de repetição.
